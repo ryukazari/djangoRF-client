@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<h2>Lista de usuarios </h2>
+<ul>
+  <li *ngFor="let user of usuarios">
+    <h2 (click)="clickUsuario(user)" >{{user.nombre}}</h2>
+  </li>
+</ul>
+<hr>
+  DNI: <input type="text" [(ngModel)]="usuario.dni"><br><br>
+  Nombre: <input type="text" [(ngModel)]="usuario.nombre"><br><br>
+  Direccion: <input type="text" [(ngModel)]="usuario.direccion"><br><br>
+  Telefono: <input type="text" [(ngModel)]="usuario.telefono"><br><br>
+  Email: <input type="text" [(ngModel)]="usuario.email"><br><br>
+  Ocupacion: <input type="text" [(ngModel)]="usuario.ocupacion"><br><br>
+  <button (click)="guardarUsuario()"> Guardar </button>
+  <button (click)="crearUsuario()"> Crear </button>
+  <button (click)="eliminarUsuario()"> Eliminar </button>
